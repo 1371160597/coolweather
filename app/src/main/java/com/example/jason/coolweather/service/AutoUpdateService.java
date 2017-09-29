@@ -35,7 +35,7 @@ public class AutoUpdateService extends Service {
         updateBingPic();
         AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
 //        int hours = 1 * 60 * 60 * 1000;//这是1小时的毫秒数
-        int hours = 2 * 60 * 1000;//这是1小时的毫秒数
+        int hours = 8 * 60 * 60 * 1000;//这是8小时的毫秒数
         long triggerAtTime = SystemClock.elapsedRealtime() + hours;
         Intent i = new Intent(this, AutoUpdateService.class);
         PendingIntent pi = PendingIntent.getService(this, 0, i, 0);
